@@ -1,0 +1,12 @@
+defaults:
+  - base
+job_name: "CP_SS_TS"
+
+protein_inputs:
+  A:
+    fasta_file: /home/ubuntu/RFAA/rf_diffusion_all_atom/generated_result/CP_SS_TS_mask2_71_proteinmpnn_constrain/4_redesign_af2/redesign_sequence.fa
+
+sm_inputs:
+  C:
+    input: /home/ubuntu/RFAA/rf_diffusion_all_atom/pl_Benchmark/CP_SS_TS/ligand/CP_SS_TS.pdb
+    input_type: "pdb"
