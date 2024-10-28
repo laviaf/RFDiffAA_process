@@ -183,7 +183,7 @@ The AlphaFold2 predicted structure will be stored in `<new_dir>/2_af2`.
 Open `rf_diffusion_all_atom/stat.ipynb`, run the section `Analyze AF2 Output`.
 In the subsection `Align AF2`, we align AlphaFold2-generated structures with RFDiffusionAA-designed backbones.
 In the subsection `Align ligand with fix residue`, we align the ligand with the selected residue (e.g., H61). The `fix_res_id` should be modified.
-In the subsection `Stat rmsd, plddt, clash', we calculate RMSD, pLDDT scores, and number of residues within 3.2Å of the ligand.
+In the subsection `Stat rmsd, plddt, clash`, we calculate RMSD, pLDDT scores, and number of residues within 3.2Å of the ligand.
 
 ## 6. Redesign Pocket with LigandMPNN
 
