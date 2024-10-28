@@ -29,7 +29,7 @@ conda install pytorch
 pip install numpy ProDy ml_collections dm-tree
 ```
 
-LigandMPNN and ProteinMPNN trained models with a small Gaussian noise (0.02, 0.10, 0.20, 0.30Å) added to the backbone coordinates. In RFDiffusionAA, they used the model trained with 0.02Å noise `proteinmpnn_v_48_020`. The model parameters can be downloaded by
+LigandMPNN and ProteinMPNN trained models with a small Gaussian noise (0.02, 0.10, 0.20, 0.30Å) added to the backbone coordinates. In RFDiffusionAA, they used the model trained with 0.20Å noise `proteinmpnn_v_48_020`. The model parameters can be downloaded by
 
 ```bash
 cd heme_binder_diffusion/lib/LigandMPNN
