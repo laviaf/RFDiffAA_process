@@ -1,34 +1,35 @@
+```
 # README
 
 ## Table of Contents
 
-1. [Prepare for LigandMPNN/ProteinMPNN](#0-prepare-for-ligandmpnn/proteinmpnn)
-2. [Set Up Environment](#1-set-up-environment)
-3. [Run RFDiffusionAA](#2-run-rfdiffusionaa)
-   - [Prepare `config.yaml`](#21-prepare-configyaml)
-   - [Run Inference](#22-run-inference)
-   - [Filter Generated Backbones](#23-filter-generated-backbones)
-4. [Run LigandMPNN](#3-run-ligandmpnn)
-   - [Generate Mask Position JSON File](#31-generate-mask-position-json-file)
-   - [Run LigandMPNN](#32-run-ligandmpnn)
-5. [Run AlphaFold2](#4-run-alphafold2)
-   - [Organize Generated Sequences](#41-organize-generated-sequences)
-   - [Run AlphaFold2 Predictions](#42-run-alphafold2-predictions)
-   - [Filter Generated Structures](#43-filter-generated-structures)
+1. [Prepare for LigandMPNN/ProteinMPNN](#1-prepare-for-ligandmpnn/proteinmpnn)
+2. [Set Up Environment](#2-set-up-environment)
+3. [Run RFDiffusionAA](#3-run-rfdiffusionaa)
+   - [Prepare `config.yaml`](#31-prepare-configyaml)
+   - [Run Inference](#32-run-inference)
+   - [Filter Generated Backbones](#33-filter-generated-backbones)
+4. [Run LigandMPNN](#4-run-ligandmpnn)
+   - [Generate Mask Position JSON File](#41-generate-mask-position-json-file)
+   - [Run LigandMPNN](#42-run-ligandmpnn)
+5. [Run AlphaFold2](#5-run-alphafold2)
+   - [Organize Generated Sequences](#51-organize-generated-sequences)
+   - [Run AlphaFold2 Predictions](#52-run-alphafold2-predictions)
+   - [Filter Generated Structures](#53-filter-generated-structures)
 
 ---
 
 ## 1. Prepare for LigandMPNN/ProteinMPNN
 
 To run LigandMPNN or ProteinMPNN, install the environment with the following command:
-
 ```
+
 conda create -n ligandmpnn_env python=3.11
 conda activate ligandmpnn_env
 conda install pytorch
 pip install numpy ProDy ml_collections dm-tree
-```
 
+```
 LigandMPNN and ProteinMPNN trained models with a small Gaussian noise (0.02, 0.10, 0.20, 0.30Å) added to the backbone coordinates. In RFDiffusionAA, they used the model trained with 0.02Å noise `proteinmpnn_v_48_020`. The model parameters can be downloaded by
 
 ```bash
@@ -159,6 +160,7 @@ python heme_binder_diffusion/lib/LigandMPNN/run.py \
   --checkpoint_ligand_mpnn heme_binder_diffusion/lib/LigandMPNN/model_params/ligandmpnn_v_32_020_25.pt \
   --bias_AA "H:-10.0,C:-10.0,M:-2.0,A:-2.0"
 ```
+
 Generated sequences will be stored in `<new_dir>/1_ProteinMPNN`.
 
 ## 5. Run AlphaFold2
