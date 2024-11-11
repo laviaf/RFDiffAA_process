@@ -1,0 +1,6 @@
+[submodule "heme_binder_diffusion/lib/LigandMPNN"]
+	path = heme_binder_diffusion/lib/LigandMPNN
+	url = git@github.com:ikalvet/LigandMPNN.git
+[submodule "heme_binder_diffusion/lib/alphafold"]
+	path = heme_binder_diffusion/lib/alphafold
+	url = git@github.com:google-deepmind/alphafold.git
