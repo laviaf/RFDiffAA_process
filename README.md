@@ -20,6 +20,15 @@
 
 ## 1. Prepare for LigandMPNN/ProteinMPNN
 
+Choose the Conda version of Python 3.11 according to your operating system:
+https://docs.anaconda.com/miniconda/miniconda-other-installer-links/
+
+Install conda in terminal:
+```bash
+bash [downloaded-conda-file-name].sh
+conda init
+```
+
 To run LigandMPNN or ProteinMPNN, install the environment with the following command:
 
 ```bash
