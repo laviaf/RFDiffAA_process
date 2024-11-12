@@ -7,6 +7,8 @@ __pycache__
 RFDiffusionAA_paper_weights.pt
 scores.csv
 
+model_params
+
 output*
 pdb100_2021Mar03
 UniRef30_2020_06
