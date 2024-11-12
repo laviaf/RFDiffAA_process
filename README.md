@@ -33,7 +33,7 @@ LigandMPNN and ProteinMPNN trained models with a small Gaussian noise (0.02, 0.1
 
 ```bash
 cd heme_binder_diffusion/lib/LigandMPNN
-bash get_model_params.sh
+bash get_model_params.sh model_params
 ```
 
 LigandMPNN/ProteinMPNN can be run by `python run.py` with predefined parameters. Typically, these parameters are useful:
