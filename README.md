@@ -70,14 +70,50 @@ LigandMPNN/ProteinMPNN can be run by `python run.py` with predefined parameters.
 
 ## 2. Set Up Environment
 
-Create the necessary conda environments using the provided YAML files
+Create conda environments for RFDiffusion and AlphaFold2 using the provided YAML files
 
 ```bash
 conda env create -f heme_binder_diffusion/envs/diffusion.yml
 conda env create -f heme_binder_diffusion/envs/mlfold.yml
 ```
 
+Or install necessary packages using:
+```bash
+# env for AlphaFold2
+conda create -n mlfold python=3.10
+conda activate mlfold
+pip install tensorflow==2.18.0
+pip install absl-py==1.0.0 biopython==1.79 chex==0.1.86 dm-haiku==0.0.12 dm-tree==0.1.8 docker==5.0.0 
+pip install immutabledict==2.0.0 jax==0.4.34 ml-collections==0.1.0 numpy==1.26.0 pandas==2.0.3 scipy==1.11.1
+pip install optax==0.2.3 orbax-checkpoint==0.9.1
+conda install pdbfixer
+
+# env for RFDiffusion
+conda create -n diffusion python=3.9
+conda activate diffusion
+
+# Linux with CUDA
+conda install pytorch=2.2.1 torchvision=0.17.1 torchaudio=2.2.1 cudatoolkit=11.8 -c pytorch
+# cpu only: mac or windows
+conda install pytorch==2.2.1 torchvision==0.17.1 torchaudio==2.2.1 cpuonly -c pytorch
+
+pip install pandas==2.2.1 numpy==1.26.4 scipy==1.12.0
+pip install scikit-learn==1.3.0 statsmodels==0.14.0 h5py==3.9.0 omegaconf==2.3.0 
+pip install hydra-core==1.3.2 icecream==2.1.3 assertpy==1.1 torchdata==0.7.1 pydantic==2.6.3 deepdiff==6.7.1 fire==0.5.0
+pip install e3nn
+conda install openbabel=3.1.1 opt_einsum=3.3.0
+# Linux with CUDA
+pip install  dgl -f https://data.dgl.ai/wheels/torch-2.2/repo.html
+# cpu only: mac or windows
+pip install dgl -f https://data.dgl.ai/wheels/repo.html
+```
+
 ## 3. Run RFDiffusionAA
+
+download model weight:
+```bash
+wget http://files.ipd.uw.edu/pub/RF-All-Atom/weights/RFDiffusionAA_paper_weights.pt
+```
 
 ### 3.1 Prepare config.yaml
 
