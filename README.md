@@ -20,6 +20,15 @@
 
 ## 1. Prepare for LigandMPNN/ProteinMPNN
 
+Choose the Conda version of Python 3.11 according to your operating system:
+https://docs.anaconda.com/miniconda/miniconda-other-installer-links/
+
+Install conda in terminal:
+```bash
+bash [downloaded-conda-file-name].sh
+conda init
+```
+
 To run LigandMPNN or ProteinMPNN, install the environment with the following command:
 
 ```bash
@@ -33,7 +42,7 @@ LigandMPNN and ProteinMPNN trained models with a small Gaussian noise (0.02, 0.1
 
 ```bash
 cd heme_binder_diffusion/lib/LigandMPNN
-bash get_model_params.sh
+bash get_model_params.sh model_params
 ```
 
 LigandMPNN/ProteinMPNN can be run by `python run.py` with predefined parameters. Typically, these parameters are useful:
